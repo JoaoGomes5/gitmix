@@ -1,10 +1,21 @@
-export interface UserProps {
+export interface User {
+  bio: string;
+  avatar_url: string,
   login: string
-  avatar_url: string
   html_url: string
-  bio: string
 }
 
-export interface LoaderDataProps {
-  user: UserProps
+
+export interface Repo {
+  id: number;
+  name: string;
+  full_name: string;
+  stargazers_count: number;
+  html_url: string;
+  language: string;
+}
+
+export interface LoaderData {
+  user: User;
+  repos: Repo[];
 }
