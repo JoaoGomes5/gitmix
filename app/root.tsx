@@ -1,6 +1,7 @@
 import {
   Link,
   Links,
+  LinksFunction,
   LiveReload,
   Meta,
   Outlet,
@@ -8,7 +9,11 @@ import {
   ScrollRestoration,
   useCatch
 } from "remix";
+import styles from "./tailwind.css";
 
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: styles },
+];
 // https://remix.run/api/conventions#default-export
 // https://remix.run/api/conventions#route-filenames
 export default function App() {
